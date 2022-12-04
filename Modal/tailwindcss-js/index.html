@@ -79,14 +79,18 @@
 
     closeBtn.addEventListener('click',function (){
         modalBody.classList.add('hidden');
+        document.querySelector('body').removeAttribute('class')
     })
     modalBtn.addEventListener('click',function (){
         if (modalBody.classList.contains('hidden')){
-            modalBody.classList.add('block');
+            modalBody.classList.add(['block']);
             modalBody.classList.remove('hidden');
+            document.querySelector('body').setAttribute('class','bg-gray-500')
+
         }else {
             modalBody.classList.remove('block');
             modalBody.classList.add('hidden');
+            document.querySelector('body').removeAttribute('class')
         }
     })
 

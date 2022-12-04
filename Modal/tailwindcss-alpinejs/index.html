@@ -10,9 +10,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body x-data="{modal:false}" x-bind:class="modal==true ? 'bg-gray-300' : '' ">
 
-    <div x-data="{modal:false}">
+    <div >
         <!-- Modal toggle -->
      <div class="p-4">
          <button
